@@ -17,8 +17,6 @@ app.get("/test", (req, res) => {
 app.use(
   cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // If you need cookies or authentication headers
   })
 );
 app.use(express.json()); // Enable parsing of JSON bodies in incoming requests that contain JSON data.
