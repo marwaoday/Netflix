@@ -67,16 +67,16 @@ export default React.memo(function CardSlider({
         <div className="flex slider" ref={listRef}>
           {data?.map((item, index) => {
             const posterPath =
-              item.poster_path ||
-              item.backdrop_path ||
-              item.mediaDetails.poster_path ||
-              item.mediaDetails.backdrop_path;
+              item?.poster_path ||
+              item?.backdrop_path ||
+              item?.mediaDetails?.poster_path ||
+              item?.mediaDetails?.backdrop_path;
 
             const title =
-              item.title ||
-              item.name ||
-              item.mediaDetails.title ||
-              item.mediaDetails.name;
+              item?.title ||
+              item?.name ||
+              item?.mediaDetails?.title ||
+              item?.mediaDetails?.name;
 
             if (!posterPath || !title) {
               console.log(`Item at index ${index} is missing data:`, item);
